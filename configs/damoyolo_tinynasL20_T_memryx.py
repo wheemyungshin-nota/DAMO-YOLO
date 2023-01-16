@@ -14,7 +14,7 @@ class Config(MyConfig):
         self.miscs.eval_interval_epochs = 10
         self.miscs.ckpt_interval_epochs = 10
         # optimizer
-        self.train.batch_size = 256
+        self.train.batch_size = 64
         self.train.base_lr_per_img = 0.01 / 64
         self.train.min_lr_ratio = 0.05
         self.train.weight_decay = 5e-4
@@ -30,8 +30,7 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
 
-        self.dataset.train_ann = ('AIHUB_updated_train', 'wider_face_updated_train', 'wider_face_updated_val', \
-            'coco_face_from_kpts_wholebody_train', 'crowd_train', 'crowd_val')
+        self.dataset.train_ann = ('wider_face_updated_val', )
         self.dataset.val_ann = ('coco_face_from_kpts_wholebody_val', )
 
         # backbone
@@ -64,7 +63,7 @@ class Config(MyConfig):
 
         ZeroHead = {
             'name': 'ZeroHead',
-            'num_classes': 80,
+            'num_classes': 2,
             'in_channels': [64, 128, 256],
             'stacked_convs': 0,
             'reg_max': 16,

@@ -9,7 +9,6 @@ from damo.structures.bounding_box import BoxList
 
 cv2.setNumThreads(0)
 
-
 class COCODataset(CocoDetection):
     def __init__(self, ann_file, root, transforms=None):
         super(COCODataset, self).__init__(root, ann_file)
@@ -26,6 +25,7 @@ class COCODataset(CocoDetection):
         }
         self.id_to_img_map = {k: v for k, v in enumerate(self.ids)}
         self._transforms = transforms
+        self.ids = [[id] for id in self.ids]
 
     def __getitem__(self, inp):
         if type(inp) is tuple:

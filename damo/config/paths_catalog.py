@@ -26,11 +26,11 @@ class DatasetCatalog(object):
         },        
         'wider_face_updated_train': {
             'img_dir': 'wider_face_updated/images/train',
-            'ann_file': 'wider_face_updated/annotations/AIHUB_updated_train.json'
+            'ann_file': 'wider_face_updated/annotations/wider_face_updated_train.json'
         },
         'wider_face_updated_val': {
             'img_dir': 'wider_face_updated/images/val',
-            'ann_file': 'wider_face_updated/annotations/AIHUB_updated_val.json'
+            'ann_file': 'wider_face_updated/annotations/wider_face_updated_val.json'
         }, 
         'crowd_train': {
             'img_dir': 'crowd/images/train',
@@ -52,17 +52,15 @@ class DatasetCatalog(object):
 
     @staticmethod
     def get(name):
-        if 'coco' in name:
-            data_dir = DatasetCatalog.DATA_DIR
-            attrs = DatasetCatalog.DATASETS[name]
-            args = dict(
-                root=os.path.join(data_dir, attrs['img_dir']),
-                ann_file=os.path.join(data_dir, attrs['ann_file']),
-            )
-            return dict(
-                factory='COCODataset',
-                args=args,
-            )
-        else:
-            raise RuntimeError('Only support coco format now!')
+    
+        data_dir = DatasetCatalog.DATA_DIR
+        attrs = DatasetCatalog.DATASETS[name]
+        args = dict(
+            root=os.path.join(data_dir, attrs['img_dir']),
+            ann_file=os.path.join(data_dir, attrs['ann_file']),
+        )
+        return dict(
+            factory='COCODataset',
+            args=args,
+        )
         return None
