@@ -14,7 +14,7 @@ class Config(MyConfig):
         self.miscs.eval_interval_epochs = 10
         self.miscs.ckpt_interval_epochs = 10
         # optimizer
-        self.train.batch_size = 256
+        self.train.batch_size = 64
         self.train.base_lr_per_img = 0.01 / 64
         self.train.min_lr_ratio = 0.05
         self.train.weight_decay = 5e-4

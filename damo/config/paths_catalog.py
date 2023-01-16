@@ -19,6 +19,35 @@ class DatasetCatalog(object):
             'img_dir': 'coco/test2017',
             'ann_file': 'coco/annotations/image_info_test-dev2017.json'
         },
+
+        'AIHUB_updated_train': {
+            'img_dir': 'AIHUB_updated/images/train',
+            'ann_file': 'AIHUB_updated/annotations/AIHUB_updated_train.json'
+        },        
+        'wider_face_updated_train': {
+            'img_dir': 'wider_face_updated/images/train',
+            'ann_file': 'wider_face_updated/annotations/AIHUB_updated_train.json'
+        },
+        'wider_face_updated_val': {
+            'img_dir': 'wider_face_updated/images/val',
+            'ann_file': 'wider_face_updated/annotations/AIHUB_updated_val.json'
+        }, 
+        'crowd_train': {
+            'img_dir': 'crowd/images/train',
+            'ann_file': 'crowd/annotations/crowd_train.json'
+        },
+        'crowd_val': {
+            'img_dir': 'crowd/images/val',
+            'ann_file': 'crowd/annotations/crowd_val.json'
+        },
+        'coco_face_from_kpts_wholebody_train': {
+            'img_dir': 'coco_face_from_kpts_wholebody/images/train',
+            'ann_file': 'coco_face_from_kpts_wholebody/annotations/coco_face_from_kpts_wholebody_train.json'
+        },
+        'coco_face_from_kpts_wholebody_val': {
+            'img_dir': 'coco_face_from_kpts_wholebody/images/val',
+            'ann_file': 'coco_face_from_kpts_wholebody/annotations/coco_face_from_kpts_wholebody_val.json'
+        },
         }
 
     @staticmethod
