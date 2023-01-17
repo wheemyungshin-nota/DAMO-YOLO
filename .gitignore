@@ -20,7 +20,7 @@
 *.cfg
 *.pth.tar
 # Datasets -------------------------------------------------------------------------------------------------------------
-datasets/coco/
+datasets/
 nas_backbones/
 scripts/
 demo/

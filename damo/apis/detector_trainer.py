@@ -184,6 +184,8 @@ class Trainer:
             len(train_dataset[0]) /
             cfg.train.batch_size)  # train_dataset is a list, however,
 
+        print("data volume: ", len(train_dataset[0]))
+
         train_loader = build_dataloader(train_dataset,
                                         cfg.train.augment,
                                         batch_size=cfg.train.batch_size,

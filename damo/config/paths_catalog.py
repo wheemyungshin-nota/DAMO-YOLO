@@ -48,6 +48,10 @@ class DatasetCatalog(object):
             'img_dir': 'coco_face_from_kpts_wholebody/images/val',
             'ann_file': 'coco_face_from_kpts_wholebody/annotations/coco_face_from_kpts_wholebody_val.json'
         },
+        'memryx_all_path': {
+            'img_dir': 'memryx_all',
+            'ann_file': 'memryx_all/memryx_all_path.json'
+        },
         }
 
     @staticmethod
