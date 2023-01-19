@@ -331,6 +331,7 @@ def main():
             ret_val, frame = cap.read()
             if ret_val:
                 bboxes, scores, cls_inds = infer_engine.forward(frame)
+                #cls_inds = cls_inds-1
                 result_frame = infer_engine.visualize(frame, bboxes, scores, cls_inds, conf=args.conf, save_result=False)
                 if args.save_result:
                     vid_writer.write(result_frame)

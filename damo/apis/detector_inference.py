@@ -79,6 +79,7 @@ def inference(
     total_timer.tic()
     predictions = compute_on_dataset(model, data_loader, device,
                                      inference_timer)
+                                     
     # wait for all processes to complete before measuring the time
     if multi_gpu_infer:
         synchronize()
