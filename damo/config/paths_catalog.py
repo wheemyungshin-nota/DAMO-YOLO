@@ -52,6 +52,10 @@ class DatasetCatalog(object):
             'img_dir': 'memryx_all',
             'ann_file': 'memryx_all/memryx_all_path.json'
         },
+        'memryx_all_path_c0': {
+            'img_dir': 'memryx_all',
+            'ann_file': 'memryx_all/memryx_all_path_c0.json'
+        },
         }
 
     @staticmethod
