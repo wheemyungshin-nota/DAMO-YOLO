@@ -35,7 +35,7 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
 
         self.dataset.train_ann = ('memryx_all_path_c0', )
-        self.dataset.val_ann = ('coco_face_from_kpts_wholebody_val', )
+        self.dataset.val_ann = ('memryx_all_path_c0', )
 
         # backbone
         structure = self.read_structure(
